@@ -1,8 +1,6 @@
 # ModernDiscord16
 
-A simple color theme for Discords Visual Refresh update using the cs16.css color palette.
-
----
+A simple color theme for Discords Visual Refresh update using the cs16.css (Counter-Strike 1.6) color palette.
 
 ---
 
@@ -27,4 +25,4 @@ https://raw.githubusercontent.com/girlglock/ModernDiscord16/refs/heads/main/src/
 
 ---
 
-![ModernDiscord16 Theme Screenshot](https://github.com/user-attachments/assets/9275c3c5-93c9-481a-9220-95dba83c0fa1)
+![ModernDiscord16](https://github.com/user-attachments/assets/171a63e3-38b8-41f3-88c1-dfcfe386a0c0)
