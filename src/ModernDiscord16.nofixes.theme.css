@@ -1,14 +1,12 @@
 /**
- * @name ModernDiscord16
+ * @name ModernDiscord16 + fixes
  * @author @girlglock
  * @version 1.0.0
- * @description cs16.css theme
+ * @description cs16.css theme 
  * @source https://github.com/girlglock/ModernDiscord16/
  * @website https://girlglock.com/
 **/
 
-
-/* --------------THEME-------------- */
 :root,
 .theme-dark,
 .theme-darker,
@@ -83,11 +81,11 @@
   --border-subtle: 0 !important;
   --app-border-frame: var(--border-input) !important;
 
-  /* accents */
+  /* accents maou */
   --text-link: var(--custom-accent) !important;
   --bg-brand: var(--custom-accent) !important;
   --brand-500: var(--custom-accent) !important;
-  --brand-360: var(--custom-accent) !important;
+  --brand-360: var(--custom-accent) !important; 
   --checkbox-border-checked: var(--custom-accent) !important;
 }
 
