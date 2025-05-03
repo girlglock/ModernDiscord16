@@ -24,20 +24,23 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-      - name: Edit ModernDiscord16.nofixes.theme.css
+      - name: Update ModernDiscord16.nofixes.theme.css
         run: |
           cp src/ModernDiscord16.theme.css src/ModernDiscord16.nofixes.theme.css
-
           sed -i '/\/\* --------------FIXES-------------- \*\//,/\/\* --------------THEME-------------- \*\//d' src/ModernDiscord16.nofixes.theme.css
-
           sed -i 's/with fixes for discord.*refresh//g' src/ModernDiscord16.nofixes.theme.css
-
           sed -i 's/ModernDiscord16 \+ fixes/ModernDiscord16/' src/ModernDiscord16.nofixes.theme.css
 
       - name: Create release zip from ./src (without the src folder)
         run: |
           cd src
-          zip -r ../ModernDiscord16.zip .  # This zips the content of src/ without the src/ folder itself
+          zip -r ../ModernDiscord16.zip .
+
+      - name: Commit the changes to ModernDiscord16.nofixes.theme.css
+        run: |
+          git add src/ModernDiscord16.nofixes.theme.css
+          git commit -m "Update ModernDiscord16.nofixes.theme.css to match ModernDiscord16.theme.css"
+          git push
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
