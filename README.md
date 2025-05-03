@@ -12,9 +12,9 @@ A Discord client that supports custom themes
 
 ### Regular Download
 
-- Download one of these:
-  - [ModernDiscord16 (with fixes)](https://github.com/girlglock/ModernDiscord16/blob/main/src/ModernDiscord16.theme.css)
-  - [ModernDiscord16 (no fixes)](https://github.com/girlglock/ModernDiscord16/blob/main/src/ModernDiscord16.nofixes.theme.css)
+- Download this [zip file](https://github.com/girlglock/ModernDiscord16/releases/latest/download/ModernDiscord16.zip)
+
+- Unzip it.
 
 - Move the downloaded `.theme.css` file into your client's `themes/` directory.
   
