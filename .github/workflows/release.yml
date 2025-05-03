@@ -3,7 +3,7 @@ name: Create Release
 on:
   push:
     paths:
-      - 'src/**'
+      - 'src/ModernDiscord16.theme.css'
 
 jobs:
   release:
@@ -24,9 +24,20 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-      - name: Create release zip from ./src
+      - name: Edit ModernDiscord16.nofixes.theme.css
         run: |
-          zip -r ModernDiscord16.zip ./src/
+          cp src/ModernDiscord16.theme.css src/ModernDiscord16.nofixes.theme.css
+
+          sed -i '/\/\* --------------FIXES-------------- \*\//,/\/\* --------------THEME-------------- \*\//d' src/ModernDiscord16.nofixes.theme.css
+
+          sed -i 's/with fixes for discord.*refresh//g' src/ModernDiscord16.nofixes.theme.css
+
+          sed -i 's/ModernDiscord16 \+ fixes/ModernDiscord16/' src/ModernDiscord16.nofixes.theme.css
+
+      - name: Create release zip from ./src (without the src folder)
+        run: |
+          cd src
+          zip -r ../ModernDiscord16.zip .  # This zips the content of src/ without the src/ folder itself
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
