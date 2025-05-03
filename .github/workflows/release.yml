@@ -39,7 +39,7 @@ jobs:
       - name: Commit the changes to ModernDiscord16.nofixes.theme.css
         run: |
           git add src/ModernDiscord16.nofixes.theme.css
-          git commit -m "Update ModernDiscord16.nofixes.theme.css to match ModernDiscord16.theme.css"
+          git commit -m "generate latest nofixes version"
           git push
 
       - name: Create GitHub Release
