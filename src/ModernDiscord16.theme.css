@@ -1,7 +1,7 @@
 /**
  * @name ModernDiscord16
  * @author @girlglock
- * @version 1.0.1
+ * @version 1.0.2
  * @description cs16.css theme with fixes for discords visual refresh
  * @source https://github.com/girlglock/ModernDiscord16/
  * @website https://girlglock.com/
@@ -269,6 +269,52 @@ textarea,
   margin-left: -3px !important;
 }
 
+/* video player */
+.mediaBarProgress_b26b79,
+.mediaBarProgress_b26b79::after,
+.mediaBarProgress_b26b79::before {
+  background-color: #1f1f1f !important;
+  height: 4px !important;
+}
+
+.buffer_b26b79 {
+  background-color: #1f1f1f !important;
+  height: 4px !important;
+}
+
+.mediaBarWrapper_b26b79,
+.fakeEdges_b26b79:after,
+.fakeEdges_b26b79:before {
+  background-color: var(--custom-secondary-bg) !important;
+  height: 4px !important;
+}
+
+.videoControls_cf09d8,
+:where([aria-label="Download"]).hoverButton__06ab4 {
+  background-color: var(--custom-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+  margin-left: -1px !important;
+  scale: 0.75 !important;
+}
+
+.full-motion .mediaBarGrabber_b26b79 {
+  background-color: var(--custom-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+  width: 5px !important;
+  margin-left: -3px !important;
+  transition:none !important;
+}
+
+.videoButton_cf09d8,
+.volumeButton__2d263 {
+  scale: 0.75 !important;
+  background-color: var(--custom-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+}
+
 /* server list */
 :where([aria-label="Servers sidebar"]) {
   margin-top: 50px !important;
@@ -318,26 +364,39 @@ textarea,
 
 /* buttons */
 .button__201d5:not(.attachButton__0923f):not([aria-label="User Settings"]):not([aria-label="Deafen"]):not([aria-label="Mute"]):not([aria-label="Enable Game Activity"]),
-:where(.iconWrapper__9293f)[role="button"]
-  :not([aria-label="Help"])
-  :not([aria-label="Inbox"])
-  :not([aria-label="User Settings"])
-  :not([aria-label="Deafen"])
-  :not([aria-label="Mute"])
-  :not([aria-label="Enable Game Activity"]),
-:where([role="tab"])
-  :not([aria-label="User Settings"])
-  :not([aria-label="Deafen"])
-  :not([aria-label="Mute"])
-  :not([aria-label="Enable Game Activity"]) {
+:where(.iconWrapper__9293f)[role="button"] :not([aria-label="Help"]) :not([aria-label="Inbox"]) :not([aria-label="User Settings"]) :not([aria-label="Deafen"]) :not([aria-label="Mute"]) :not([aria-label="Enable Game Activity"]),
+:where([role="tab"]) :not([aria-label="User Settings"]) :not([aria-label="Deafen"]) :not([aria-label="Mute"]) :not([aria-label="Enable Game Activity"]) {
   background-color: var(--custom-bg) !important;
 }
 
 .button__201d5:not(.attachButton__0923f),
 :where(.iconWrapper__9293f)[role="button"]:not([aria-label="Help"]):not([aria-label="Inbox"]),
-:where([role="tab"]) {
+:where([role="tab"]),
+.reactionBtn__23977,
+.reaction__23977,
+.hoverBarButton_f84418 {
   border: 1px solid !important;
   border-color: var(--border-button) !important;
+}
+
+.channel__972a0:focus-within .closeButton__972a0, .channel__972a0:hover .closeButton__972a0 {
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+  width: 8px !important;
+  height: 16px !important;
+  margin-right: 8px !important;
+}
+
+.visual-refresh .popoverReactionHoverBar_f84418 {
+  gap: 2px !important;
+}
+
+/* files */
+.visual-refresh .file__0ccae {
+  background-color: var(--custom-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+  box-shadow: none !important;
 }
 
 /* member cards */
@@ -381,6 +440,10 @@ textarea,
   margin-right: 6px !important;
 }
 
+.username_c19a55 {
+  text-shadow: 1px 1px 1px rgba(37, 37, 37, 0.5) !important;
+}
+
 /* scrollbars */
 ::-webkit-scrollbar {
   width: 7px !important;
@@ -394,11 +457,12 @@ textarea,
 }
 
 /* unrounding */
-* {
+*:not(.avatar_c19a55) {
   border-radius: 0px 0px 0px !important;
 }
 
-[class^='listItem_'] [class^='wrapper_']>[class^='svg_']>mask,
+/* disable for now until i get to status indicators */
+/* [class^='listItem_'] [class^='wrapper_']>[class^='svg_']>mask,
 [class^='bannerSVGWrapper_']>mask>circle {
   display: none;
 }
@@ -406,7 +470,7 @@ textarea,
 [class^='mask_']>foreignObject,
 [class^='svg_']>foreignObject {
   mask-image: none;
-}
+} */ 
 
 @font-face {
   font-family: 'Adwaita';
