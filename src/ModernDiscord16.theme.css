@@ -1,7 +1,7 @@
 /**
  * @name ModernDiscord16
  * @author @girlglock
- * @version 1.0.0
+ * @version 1.0.1
  * @description cs16.css theme with fixes for discords visual refresh
  * @source https://github.com/girlglock/ModernDiscord16/
  * @website https://girlglock.com/
@@ -146,10 +146,13 @@ h3>span>time[aria-label^="Today at"]::before {
 
   /* accents maou */
   --text-link: var(--custom-accent) !important;
+  --text-brand: var(--custom-accent) !important;
   --bg-brand: var(--custom-accent) !important;
   --brand-500: var(--custom-accent) !important;
-  --brand-360: var(--custom-accent) !important; 
+  --brand-360: var(--custom-accent) !important;
   --checkbox-border-checked: var(--custom-accent) !important;
+
+  --text-low-contrast: var(--custom-secondary-accent) !important;
 }
 
 .children__9293f:after {
@@ -225,6 +228,47 @@ textarea,
   scale: 0.8 !important;
 }
 
+:where(.visual-refresh) .checkbox_f525d3.checked_f525d3 {
+  width: 12px;
+  height: 12px;
+}
+
+:where(.visual-refresh) .checkbox_f525d3 {
+  scale: 0.5 !important;
+  width: 12px;
+  height: 12px;
+  background-color: var(--custom-secondary-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+}
+
+.bar_a562c8 {
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+  height: 4px !important;
+  box-sizing: border-box;
+}
+
+.barFill_a562c8 {
+  background-color: #1f1f1f !important;
+}
+
+.markDash_a562c8 {
+  margin-top: 30px !important;
+
+  background-image: linear-gradient(to right,
+      var(--slider) 1px,
+      transparent 1px);
+}
+
+.grabber_a562c8 {
+  background-color: var(--custom-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+  width: 5px !important;
+  margin-left: -3px !important;
+}
+
 /* server list */
 :where([aria-label="Servers sidebar"]) {
   margin-top: 50px !important;
@@ -273,6 +317,22 @@ textarea,
 }
 
 /* buttons */
+.button__201d5:not(.attachButton__0923f):not([aria-label="User Settings"]):not([aria-label="Deafen"]):not([aria-label="Mute"]):not([aria-label="Enable Game Activity"]),
+:where(.iconWrapper__9293f)[role="button"]
+  :not([aria-label="Help"])
+  :not([aria-label="Inbox"])
+  :not([aria-label="User Settings"])
+  :not([aria-label="Deafen"])
+  :not([aria-label="Mute"])
+  :not([aria-label="Enable Game Activity"]),
+:where([role="tab"])
+  :not([aria-label="User Settings"])
+  :not([aria-label="Deafen"])
+  :not([aria-label="Mute"])
+  :not([aria-label="Enable Game Activity"]) {
+  background-color: var(--custom-bg) !important;
+}
+
 .button__201d5:not(.attachButton__0923f),
 :where(.iconWrapper__9293f)[role="button"]:not([aria-label="Help"]):not([aria-label="Inbox"]),
 :where([role="tab"]) {
