@@ -2,8 +2,8 @@ name: Create Release
 
 on:
   push:
-    tags:
-      - 'v*'
+    paths:
+      - 'src/**'
 
 jobs:
   release:
@@ -12,6 +12,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Extract version from ModernDiscord16.theme.css
+        id: get_version
+        run: |
+          VERSION=$(grep -oP '(?<=@version\s)(\d+\.\d+\.\d+)' src/ModernDiscord16.theme.css)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: Set up Git
         run: |
@@ -25,7 +31,7 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
+          tag_name: ${{ env.VERSION }}
           files: ModernDiscord16.zip
 
       - name: Clean up
