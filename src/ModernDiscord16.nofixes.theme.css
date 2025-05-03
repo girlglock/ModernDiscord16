@@ -14,56 +14,81 @@
 .theme-darker,
 .theme-light,
 .theme-midnight {
+  /* color palette */
   --custom-bg: #4a5942;
   --custom-secondary-bg: #3e4637;
   --custom-accent: #c4b550;
   --custom-secondary-accent: #958831;
 
+  /* font */
   --font-primary: "Adwaita" !important;
 
+  /* primary backgrounds */
   --background-primary: var(--custom-bg) !important;
-  --background-modifier-selected: var(--custom-secondary-accent) !important;
   --background-tertiary: var(--custom-bg) !important;
   --background-accent: var(--custom-bg) !important;
-  --bg-base-secondary: var(--custom-bg) !important;
+  --background-secondary: var(--custom-bg) !important;
+  --background-secondary-alt: var(--custom-bg) !important;
+  --background-floating: var(--custom-bg) !important;
+
+  /* background modifiers */
+  --background-modifier-selected: var(--custom-secondary-accent) !important;
+  --background-mod-subtle: var(--custom-bg) !important;
+  --bg-mod-subtle: var(--custom-bg) !important;
+
+  /* base background layers */
   --bg-base-primary: var(--custom-bg) !important;
+  --bg-base-secondary: var(--custom-bg) !important;
   --bg-base-tertiary: var(--custom-bg) !important;
-  --custom-channel-members-bg: var(--custom-bg) !important;
   --background-base-low: var(--custom-bg) !important;
   --background-base-lower: var(--custom-bg) !important;
   --background-base-lowest: var(--custom-secondary-bg) !important;
-  --bg-overlay-chat: var(--custom-bg) !important;
-  --custom-app-top-bar-height: 35px !important;
-  --scrollbar-auto-thumb: var(--custom-bg) !important;
-  --scrollbar-thin-thumb: var(--custom-bg) !important;
-  --background-mod-subtle: var(--custom-bg) !important;
+
+  /* surface backgrounds */
   --background-surface-high: var(--custom-bg) !important;
   --background-surface-higher: var(--custom-bg) !important;
   --background-surface-highest: var(--custom-bg) !important;
-  --background-secondary-alt: var(--custom-bg) !important;
-  --background-secondary: var(--custom-bg) !important;
-  --background-floating: var(--custom-bg) !important;
-  --bg-mod-subtle: var(--custom-bg) !important;
-  --card-primary-bg: var(--custom-bg) !important;
+
+  /* scrollbar */
+  --scrollbar-auto-thumb: var(--custom-bg) !important;
+  --scrollbar-thin-thumb: var(--custom-bg) !important;
+
+  /* app layout */
+  --custom-app-top-bar-height: 35px !important;
+  --custom-channel-members-bg: var(--custom-bg) !important;
+  --bg-overlay-chat: var(--custom-bg) !important;
+
+  /* modal & card */
   --modal-background: var(--custom-bg) !important;
   --modal-footer-background: var(--custom-bg) !important;
+  --card-primary-bg: var(--custom-bg) !important;
+
+  /* interactive elements */
   --interactive-muted: grey !important;
   --button-secondary-background: var(--custom-bg) !important;
   --autocomplete-bg: var(--custom-bg) !important;
+
+  /* status */
   --status-danger: var(--custom-secondary-accent) !important;
 
+  /* selection */
   --selected-tab-item-color: var(--custom-accent) !important;
 
+  /* borders */
   --border-light: #8c9284;
   --border-dark: #292c21;
-
   --border-button: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light) !important;
   --border-input: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark) !important;
-
   --border-faint: var(--border-button) !important;
   --border-subtle: 0 !important;
   --app-border-frame: var(--border-input) !important;
 
+  /* accents */
+  --text-link: var(--custom-accent) !important;
+  --bg-brand: var(--custom-accent) !important;
+  --brand-500: var(--custom-accent) !important;
+  --brand-360: var(--custom-accent) !important;
+  --checkbox-border-checked: var(--custom-accent) !important;
 }
 
 .children__9293f:after {
@@ -105,6 +130,7 @@ textarea,
   border: none !important;
   color: var(--custom-accent) !important;
 }
+
 :where(.visual-refresh) [class*="tab"]::after {
   background: var(--custom-accent) !important;
 }
@@ -127,6 +153,15 @@ textarea,
 /* settings */
 :where([role="tab"]).item_b3f026 {
   margin-top: 2px !important;
+}
+
+.container__87bf1 {
+  background-color: var(--custom-accent) !important;
+}
+
+.radioIndicatorChecked__001a7,
+.radioIndicator__001a7 {
+  scale: 0.8 !important;
 }
 
 /* server list */
@@ -196,6 +231,7 @@ textarea,
   border: 1px solid !important;
   border-color: var(--border-input) !important;
   margin-right: 0px !important;
+  margin-left: 1px !important;
   margin-bottom: -54px !important;
 }
 
