@@ -9,7 +9,6 @@
 
 /* --------------FIXES-------------- */
 
-
 /* hide members list when window has more height than width*/
 @media (max-aspect-ratio: 1/1) {
   .container_c8ffbb {
