@@ -1,7 +1,7 @@
 /**
  * @name ModernDiscord16
  * @author @girlglock
- * @version 1.2.0
+ * @version 1.3.0
  * @description cs16.css theme
  * @source https://github.com/girlglock/ModernDiscord16/
  * @website https://girlglock.com/
@@ -9,18 +9,24 @@
 
 
 /* --------------THEME-------------- */
-:root {
+:root,
+.theme-dark,
+.theme-darker,
+.theme-light,
+.theme-midnight {
   --custom-bg: #4a5942;
   --custom-secondary-bg: #3e4637;
   --custom-accent: #c4b550;
   --custom-secondary-accent: #958831;
 
-  --font-primary: "Adwaita", sans-serif !important;
+  --font-primary: "Adwaita" !important;
 
   --background-primary: var(--custom-bg) !important;
   --background-modifier-selected: var(--custom-secondary-accent) !important;
   --background-tertiary: var(--custom-bg) !important;
   --background-accent: var(--custom-bg) !important;
+  --bg-base-secondary: var(--custom-bg) !important;
+  --bg-base-primary: var(--custom-bg) !important;
   --bg-base-tertiary: var(--custom-bg) !important;
   --custom-channel-members-bg: var(--custom-bg) !important;
   --background-base-low: var(--custom-bg) !important;
@@ -31,7 +37,6 @@
   --scrollbar-auto-thumb: var(--custom-bg) !important;
   --scrollbar-thin-thumb: var(--custom-bg) !important;
   --background-mod-subtle: var(--custom-bg) !important;
-  --background-mod-normal: var(--custom-secondary-accent) !important;
   --background-surface-high: var(--custom-bg) !important;
   --background-surface-higher: var(--custom-bg) !important;
   --background-surface-highest: var(--custom-bg) !important;
@@ -47,22 +52,86 @@
   --autocomplete-bg: var(--custom-bg) !important;
   --status-danger: var(--custom-secondary-accent) !important;
 
+  --selected-tab-item-color: var(--custom-accent) !important;
 
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: none;
-  font-smooth: never;
+  --border-light: #8c9284;
+  --border-dark: #292c21;
+
+  --border-button: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light) !important;
+  --border-input: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark) !important;
+
+  --border-faint: var(--border-button) !important;
+  --border-subtle: 0 !important;
+  --app-border-frame: var(--border-input) !important;
+
 }
 
 .children__9293f:after {
   display: none !important;
 }
 
+/* search bar */
 :where(.visual-refresh) .themedBackground__74017,
 textarea,
-.visual-refresh .searchBar__97492,
-.visual-refresh .channelTextArea_f75fb0,
-div:not([class="contents__201d5"]):has(> input) {
+:where(.visual-refresh) .container_a45028,
+.visual-refresh .searchBar__97492 {
   background-color: var(--custom-secondary-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+}
+
+.searchBar__97492 {
+  width: var(--custom-member-list-width) !important;
+}
+
+.searchBar_c7e907 {
+  background-color: color-mix(in srgb, black 20%, var(--custom-secondary-bg)) !important;
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+}
+
+/* title */
+.title_c38106 {
+  justify-content: start;
+}
+
+.title__85643 {
+  margin-left: 10px !important;
+}
+
+/* tabs */
+:where(.visual-refresh) [class*="tab"] {
+  padding: 6px !important;
+  border: none !important;
+  color: var(--custom-accent) !important;
+}
+::after {
+  background: var(--custom-accent) !important;
+}
+
+/* min max close */
+.winButtons_c38106 {
+  margin-right: 10px !important;
+}
+
+:where([role="button"]).winButton_c38106 {
+  background-color: var(--custom-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+  padding: 0px;
+  width: 18px;
+  height: 18px;
+  background: no-repeat center center;
+}
+
+/* settings */
+:where([role="tab"]).item_b3f026 {
+  margin-top: 2px !important;
+}
+
+/* server list */
+:where([aria-label="Servers sidebar"]) {
+  margin-top: 50px !important;
 }
 
 /* activity */
@@ -72,9 +141,47 @@ div:not([class="contents__201d5"]):has(> input) {
   border: 0px !important;
 }
 
+.itemCard__7e549 {
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+}
+
 /* member list */
 .members_c8ffbb {
   background-color: var(--custom-secondary-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+  margin-right: 3px !important;
+}
+
+.header_f37cb1 {
+  background-color: var(--custom-bg) !important;
+}
+
+/* dividers */
+:where(.visual-refresh) .separator_c1e9c4,
+.sectionDivider__35e86,
+:where(.visual-refresh) [class*="divider_"] {
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+}
+
+.peopleListItem_cc6179 {
+  border-bottom-color: var(--border-dark);
+  border-top-color: var(--border-light);
+}
+
+/* friends list*/
+[role="navigation"].container__9293f.themed__9293f {
+  background-color: var(--custom-bg) !important;
+}
+
+/* buttons */
+.button__201d5:not(.attachButton__0923f),
+:where(.iconWrapper__9293f)[role="button"]:not([aria-label="Help"]):not([aria-label="Inbox"]),
+:where([role="tab"]) {
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
 }
 
 /* member cards */
@@ -83,18 +190,65 @@ div:not([class="contents__201d5"]):has(> input) {
   background-color: var(--custom-secondary-bg) !important;
 }
 
+/* channels */
+:where([id="channels"]),
+.privateChannels__35e86 {
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+  margin-right: 0px !important;
+  margin-bottom: -54px !important;
+}
+
+:where([aria-label="Channels"]),
+:where([aria-label="Private channels"]) {
+  margin-bottom: 55px !important;
+}
+
+/* user area */
+[aria-label="User area"].panels_c48ade {
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+}
+
+/* chat */
+:where([role="separator"]).divider__5126c {
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+}
+
+.scrollableContainer__74017::-webkit-scrollbar {
+  display: none !important;
+}
+
+.buttons__74017 {
+  margin-right: 6px !important;
+}
+
+/* scrollbars */
+::-webkit-scrollbar {
+  width: 7px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 17px !important;
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+  border-radius: 0 !important;
+}
+
 /* unrounding */
 * {
   border-radius: 0px 0px 0px !important;
 }
 
-[class^='listItem_'] [class^='wrapper_'] > [class^='svg_'] > mask,
-[class^='bannerSVGWrapper_'] > mask > circle {
-	display: none;
+[class^='listItem_'] [class^='wrapper_']>[class^='svg_']>mask,
+[class^='bannerSVGWrapper_']>mask>circle {
+  display: none;
 }
-[class^='mask_'] > foreignObject,
-[class^='svg_'] > foreignObject {
-	mask-image: none;
+
+[class^='mask_']>foreignObject,
+[class^='svg_']>foreignObject {
+  mask-image: none;
 }
 
 @font-face {
