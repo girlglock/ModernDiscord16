@@ -105,7 +105,7 @@ textarea,
   border: none !important;
   color: var(--custom-accent) !important;
 }
-::after {
+:where(.visual-refresh) [class*="tab"]::after {
   background: var(--custom-accent) !important;
 }
 
