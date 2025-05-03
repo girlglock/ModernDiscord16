@@ -144,11 +144,11 @@ h3>span>time[aria-label^="Today at"]::before {
   --border-subtle: 0 !important;
   --app-border-frame: var(--border-input) !important;
 
-  /* accents */
+  /* accents aou */
   --text-link: var(--custom-accent) !important;
   --bg-brand: var(--custom-accent) !important;
   --brand-500: var(--custom-accent) !important;
-  --brand-360: var(--custom-accent) !important;
+  --brand-360: var(--custom-accent) !important; 
   --checkbox-border-checked: var(--custom-accent) !important;
 }
 
