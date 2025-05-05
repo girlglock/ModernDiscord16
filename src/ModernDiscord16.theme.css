@@ -9,3 +9,19 @@
 
 @import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/subcss/ModernDiscord16.fixes.theme.css");
 @import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/subcss/ModernDiscord16.main.theme.css");
+
+:root,
+.theme-dark,
+.theme-darker,
+.theme-light,
+.theme-midnight {
+  /* color palette */
+  --custom-bg: #4a5942;
+  --custom-secondary-bg: #3e4637;
+  --custom-accent: #c4b550;
+  --custom-secondary-accent: #958831;
+  --border-light: #8c9284;
+  --border-dark: #292c21;
+  /* font */
+  --font-primary: "Adwaita" !important;
+}
