@@ -1,7 +1,7 @@
 /**
  * @name ModernDiscord16
  * @author @girlglock
- * @version 1.0.2
+ * @version 1.0.3
  * @description cs16.css theme 
  * @source https://github.com/girlglock/ModernDiscord16/
  * @website https://girlglock.com/
@@ -100,7 +100,8 @@
 :where(.visual-refresh) .themedBackground__74017,
 textarea,
 :where(.visual-refresh) .container_a45028,
-.visual-refresh .searchBar__97492 {
+.visual-refresh .searchBar__97492,
+.collapsed_d9be46 .title_d9be46 {
   background-color: var(--custom-secondary-bg) !important;
   border: 1px solid !important;
   border-color: var(--border-input) !important;
@@ -114,6 +115,18 @@ textarea,
   background-color: color-mix(in srgb, black 20%, var(--custom-secondary-bg)) !important;
   border: 1px solid !important;
   border-color: var(--border-input) !important;
+}
+
+:where([aria-label="Search Results"]).searchResultsWrap_a9e706 {
+  background-color: color-mix(in srgb, black 20%, var(--custom-secondary-bg)) !important;
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+}
+
+.searchResult__02a39 {
+  background-color: var(--custom-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
 }
 
 /* title */
@@ -306,12 +319,15 @@ textarea,
   background-color: var(--custom-bg) !important;
 }
 
-.button__201d5:not(.attachButton__0923f),
+.button__201d5:not(.attachButton__0923f):not(.detailsTextButton__0be77),
 :where(.iconWrapper__9293f)[role="button"]:not([aria-label="Help"]):not([aria-label="Inbox"]),
 :where([role="tab"]),
 .reactionBtn__23977,
 .reaction__23977,
-.hoverBarButton_f84418 {
+.hoverBarButton_f84418,
+.hoverButton__06ab4,
+.favButton__2dc39,
+.gifFavoriteButton_b7e1cb {
   border: 1px solid !important;
   border-color: var(--border-button) !important;
 }
@@ -329,7 +345,9 @@ textarea,
 }
 
 /* files */
-.visual-refresh .file__0ccae {
+.visual-refresh .file__0ccae,
+.upload_aa605f,
+.wrapper_f7ecac {
   background-color: var(--custom-bg) !important;
   border: 1px solid !important;
   border-color: var(--border-button) !important;
@@ -379,6 +397,45 @@ textarea,
 
 .username_c19a55 {
   text-shadow: 1px 1px 1px rgba(37, 37, 37, 0.5) !important;
+}
+
+.cozy_c19a55.hasThread_c19a55::after {
+  border-bottom: 1px solid !important;
+  border-left: 1px solid !important;
+  border-color: var(--border-inbut) !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.visual-refresh .container__0be77 {
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+}
+
+/* forum */
+.visual-refresh .matchingPostsRow_f369db,
+.pill_a2c9e8,
+.reactionInner_f8896c {
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+}
+
+.visual-refresh .header_f369db {
+  border-bottom: 1px solid !important;
+  border-color: var(--border-button) !important;
+}
+
+.visual-refresh .tagsContainer_f369db {
+  border-top: 1px solid !important;
+  border-color: var(--border-button) !important;
+}
+
+.full-motion .container__9a337 {
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+}
+
+.inputDefault__0f084.input__0f084.textArea__7aff3::placeholder {
+  font-size: 14px;
 }
 
 /* scrollbars */
