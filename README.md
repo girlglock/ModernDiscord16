@@ -1,6 +1,6 @@
 # ModernDiscord16
 
-A simple color theme for Discords Visual Refresh update using the cs16.css (Counter-Strike 1.6) color palette.
+A Discord theme inspired by the iconic VGUI interface of the GoldSrc Engine (Counter-Strike 1.6 & Half-Life).
 
 ## Default
 ![ModernDiscord16](https://github.com/user-attachments/assets/171a63e3-38b8-41f3-88c1-dfcfe386a0c0)
@@ -49,7 +49,7 @@ https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/ModernDisco
 
 **Catppuccin version**  
 ```
-https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/ModernDiscord16.catpuccin.theme.css
+https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/ModernDiscord16.catppuccin.theme.css
 ```
 
 **RosePine version**  
