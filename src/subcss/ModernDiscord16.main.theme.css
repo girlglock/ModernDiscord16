@@ -1,6 +1,10 @@
 /* --------------THEME-------------- */
 
-.custom-cs16-colors {
+:root,
+.theme-dark,
+.theme-darker,
+.theme-light,
+.theme-midnight {
   /* color palette */
   --custom-bg: #4a5942;
   --custom-secondary-bg: #3e4637;
@@ -10,14 +14,7 @@
   --border-dark: #292c21;
   /* font */
   --font-primary: "Adwaita" !important;
-}
-
-:root,
-.theme-dark,
-.theme-darker,
-.theme-light,
-.theme-midnight,
-.custom-cs16-colors {
+  
   /* primary backgrounds */
   --background-primary: var(--custom-bg) !important;
   --background-tertiary: var(--custom-bg) !important;

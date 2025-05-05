@@ -10,7 +10,11 @@
 @import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/subcss/ModernDiscord16.fixes.theme.css");
 @import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/subcss/ModernDiscord16.main.theme.css");
 
-.custom-cs16-colors {
+:root,
+.theme-dark,
+.theme-darker,
+.theme-light,
+.theme-midnight {
   /* color palette */
   --custom-bg: #191724;
   --custom-secondary-bg: #1f1d2e;
