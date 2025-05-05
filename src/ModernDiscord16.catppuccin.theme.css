@@ -1,0 +1,54 @@
+/**
+ * @name ModernDiscord16
+ * @author @girlglock
+ * @version 1.0.4
+ * @description cs16.css theme (catppuccin)
+ * @source https://github.com/girlglock/ModernDiscord16/
+ * @website https://girlglock.com/
+ **/
+
+
+@import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/subcss/ModernDiscord16.fixes.theme.css");
+@import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/subcss/ModernDiscord16.main.theme.css");
+
+
+/* frappé ash*/
+.theme-dark {
+  --custom-bg: #303446;
+  --custom-secondary-bg: #292c3c;
+  --custom-accent: #e5c890;
+  --custom-secondary-accent: #f4b8e4;
+  --border-light: #949cbb;
+  --border-dark: #14161e;
+  --font-primary: "Adwaita" !important;
+}
+/* latte light*/
+.theme-light {
+  --custom-bg: #eff1f5;
+  --custom-secondary-bg: #e6e9ef;
+  --custom-accent: #df8e1d;
+  --custom-secondary-accent: #ea76cb;
+  --border-light: #9ca0b0;
+  --border-dark: #737477;
+  --font-primary: "Adwaita" !important;
+}
+/* macchiato dark*/
+.theme-darker {
+  --custom-bg: #24273a;
+  --custom-secondary-bg: #1e2030;
+  --custom-accent: #eed49f;
+  --custom-secondary-accent: #c6a0f6;
+  --border-light: #939ab7;
+  --border-dark: #0f1018;
+  --font-primary: "Adwaita" !important;
+}
+/* mocha onyx*/
+.theme-midnight {
+  --custom-bg: #1e1e2e;
+  --custom-secondary-bg: #181825;
+  --custom-accent: #f9e2af;
+  --custom-secondary-accent: #cba6f7;
+  --border-light: #9399b2;
+  --border-dark: #0c0c12;
+  --font-primary: "Adwaita" !important;
+}
