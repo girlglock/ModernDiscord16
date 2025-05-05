@@ -7,8 +7,8 @@
  * @website https://girlglock.com/
 **/
 
-@import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/refs/heads/main/src/subcss/ModernDiscord16.fixes.theme.css");
-@import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/refs/heads/main/src/subcss/ModernDiscord16.main.theme.css");
+@import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/subcss/ModernDiscord16.fixes.theme.css");
+@import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/subcss/ModernDiscord16.main.theme.css");
 
 :root,
 .theme-dark,

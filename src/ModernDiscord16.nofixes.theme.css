@@ -7,5 +7,89 @@
  * @website https://girlglock.com/
 **/
 
-@import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/refs/heads/main/src/ModernDiscord16.theme.css");
-@import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/refs/heads/main/src/subcss/ModernDiscord16.main.theme.css");
+@import url("https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/subcss/ModernDiscord16.main.theme.css");
+
+:root,
+.theme-dark,
+.theme-darker,
+.theme-light,
+.theme-midnight {
+  /* color palette */
+  --custom-bg: #4a5942;
+  --custom-secondary-bg: #3e4637;
+  --custom-accent: #c4b550;
+  --custom-secondary-accent: #958831;
+
+  /* font */
+  --font-primary: "Adwaita" !important;
+
+  /* primary backgrounds */
+  --background-primary: var(--custom-bg) !important;
+  --background-tertiary: var(--custom-bg) !important;
+  --background-accent: var(--custom-bg) !important;
+  --background-secondary: var(--custom-bg) !important;
+  --background-secondary-alt: var(--custom-bg) !important;
+  --background-floating: var(--custom-bg) !important;
+
+  /* background modifiers */
+  --background-modifier-selected: var(--custom-secondary-accent) !important;
+  --background-mod-subtle: var(--custom-bg) !important;
+  --bg-mod-subtle: var(--custom-bg) !important;
+
+  /* base background layers */
+  --bg-base-primary: var(--custom-bg) !important;
+  --bg-base-secondary: var(--custom-bg) !important;
+  --bg-base-tertiary: var(--custom-bg) !important;
+  --background-base-low: var(--custom-bg) !important;
+  --background-base-lower: var(--custom-bg) !important;
+  --background-base-lowest: var(--custom-secondary-bg) !important;
+
+  /* surface backgrounds */
+  --background-surface-high: var(--custom-bg) !important;
+  --background-surface-higher: var(--custom-bg) !important;
+  --background-surface-highest: var(--custom-bg) !important;
+
+  /* scrollbar */
+  --scrollbar-auto-thumb: var(--custom-bg) !important;
+  --scrollbar-thin-thumb: var(--custom-bg) !important;
+
+  /* app layout */
+  --custom-app-top-bar-height: 35px !important;
+  --custom-channel-members-bg: var(--custom-bg) !important;
+  --bg-overlay-chat: var(--custom-bg) !important;
+
+  /* modal & card */
+  --modal-background: var(--custom-bg) !important;
+  --modal-footer-background: var(--custom-bg) !important;
+  --card-primary-bg: var(--custom-bg) !important;
+
+  /* interactive elements */
+  --interactive-muted: grey !important;
+  --button-secondary-background: var(--custom-bg) !important;
+  --autocomplete-bg: var(--custom-bg) !important;
+
+  /* status */
+  --status-danger: var(--custom-secondary-accent) !important;
+
+  /* selection */
+  --selected-tab-item-color: var(--custom-accent) !important;
+
+  /* borders */
+  --border-light: #8c9284;
+  --border-dark: #292c21;
+  --border-button: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light) !important;
+  --border-input: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark) !important;
+  --border-faint: var(--border-button) !important;
+  --border-subtle: 0 !important;
+  --app-border-frame: var(--border-input) !important;
+
+  /* accents maou */
+  --text-link: var(--custom-accent) !important;
+  --text-brand: var(--custom-accent) !important;
+  --bg-brand: var(--custom-accent) !important;
+  --brand-500: var(--custom-accent) !important;
+  --brand-360: var(--custom-accent) !important;
+  --checkbox-border-checked: var(--custom-accent) !important;
+
+  --text-low-contrast: var(--custom-secondary-accent) !important;
+}
