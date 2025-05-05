@@ -16,7 +16,8 @@
 .theme-dark,
 .theme-darker,
 .theme-light,
-.theme-midnight {
+.theme-midnight,
+.custom-cs16-colors {
   /* primary backgrounds */
   --background-primary: var(--custom-bg) !important;
   --background-tertiary: var(--custom-bg) !important;
