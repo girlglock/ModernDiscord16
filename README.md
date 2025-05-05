@@ -30,10 +30,15 @@ A Discord client that supports custom themes
 
 **With fixes**  
 ```
-https://raw.githubusercontent.com/girlglock/ModernDiscord16/refs/heads/main/src/ModernDiscord16.theme.css
+https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/ModernDiscord16.theme.css
+```
+
+**RosePine version**  
+```
+https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/ModernDiscord16.rosepine.theme.css
 ```
 
 **No fixes version**  
 ```
-https://raw.githubusercontent.com/girlglock/ModernDiscord16/refs/heads/main/src/ModernDiscord16.nofixes.theme.css
+https://raw.githubusercontent.com/girlglock/ModernDiscord16/main/src/ModernDiscord16.nofixes.theme.css
 ```
