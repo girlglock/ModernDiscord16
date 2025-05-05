@@ -1,0 +1,70 @@
+/**
+ * @name ModernDiscord16
+ * @author @girlglock
+ * @version 1.0.3
+ * @description cs16.css theme with fixes for discords visual refresh
+ * @source https://github.com/girlglock/ModernDiscord16/
+ * @website https://girlglock.com/
+**/
+
+/* --------------FIXES-------------- */
+
+/* hide members list when window has more height than width*/
+@media (max-aspect-ratio: 1/1) {
+  .container_c8ffbb {
+    display: none !important;
+  }
+}
+
+/* Fix user panel symetry */
+section.panels_c48ade {
+  justify-content: center;
+  margin-left: 74px;
+  width: calc(100% - 90px) !important;
+  bottom: 0;
+  border-radius: 0;
+}
+
+.visual-refresh .container__37e49 {
+  padding: 6px;
+}
+
+/* Lower chat field + put typing indicators on top */
+main[class^="chatContent"]>form[class^="form"] {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+main[class^="chatContent"]>form[class^="form"]:not(:has(div[class^="typing"])) {
+  margin-top: calc(7px + (var(--space-xs) * 2)) !important;
+}
+
+main[class^="chatContent"]>form[class^="form"] div[class^="channelTextArea"] {
+  margin-bottom: calc(-8px + (var(--space-xs) * 2)) !important;
+
+}
+
+div[class^="typing"] {
+  position: static !important;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+div[class^="messagesWrapper"] div[class^="scrollerSpacer"] {
+  display: none !important;
+}
+
+/* Re-add 'Today at' to timestamps */
+h3>span>time[aria-label^="Today at"]::before {
+  content: "Today at ";
+}
+
+/* remove annoying ::after under channel list */
+.visual-refresh .sidebar_c48ade::after {
+  content: none !important;
+  display: none !important;
+}
+
+.visual-refresh .title_f75fb0 {
+  padding-right: 0px !important;
+}

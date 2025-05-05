@@ -16,10 +16,10 @@
 .theme-light,
 .theme-midnight {
   /* color palette */
-  --custom-bg: #4a5942;
-  --custom-secondary-bg: #3e4637;
-  --custom-accent: #c4b550;
-  --custom-secondary-accent: #958831;
+  --custom-bg: #191724;
+  --custom-secondary-bg: #1f1d2e;
+  --custom-accent: #f6c177;
+  --custom-secondary-accent: #eb6f92;
 
   /* font */
   --font-primary: "Adwaita" !important;
@@ -51,8 +51,8 @@
   --background-surface-highest: var(--custom-bg) !important;
 
   /* scrollbar */
-  --scrollbar-auto-thumb: var(--custom-bg) !important;
-  --scrollbar-thin-thumb: var(--custom-bg) !important;
+  --scrollbar-auto-thumb: var(--custom-secondary-bg) !important;
+  --scrollbar-thin-thumb: var(--custom-secondary-bg) !important;
 
   /* app layout */
   --custom-app-top-bar-height: 35px !important;
@@ -65,7 +65,7 @@
   --card-primary-bg: var(--custom-bg) !important;
 
   /* interactive elements */
-  --interactive-muted: grey !important;
+  --interactive-muted: #6e6a86 !important;
   --button-secondary-background: var(--custom-bg) !important;
   --autocomplete-bg: var(--custom-bg) !important;
 
@@ -76,8 +76,8 @@
   --selected-tab-item-color: var(--custom-accent) !important;
 
   /* borders */
-  --border-light: #8c9284;
-  --border-dark: #292c21;
+  --border-light: #908caa;
+  --border-dark: #403d52;
   --border-button: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light) !important;
   --border-input: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark) !important;
   --border-faint: var(--border-button) !important;
