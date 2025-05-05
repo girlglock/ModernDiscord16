@@ -1,1 +1,35 @@
+name: Manual Release
 
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Extract version from ModernDiscord16.theme.css
+        id: get_version
+        run: |
+          VERSION=$(grep -oP '(?<=@version\s)(\d+\.\d+\.\d+)' src/ModernDiscord16.theme.css)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Extracted version: $VERSION"
+
+      - name: Create release zip from ./src (without the src folder)
+        run: |
+          cd src
+          zip -r ../ModernDiscord16.zip .
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.VERSION }}
+          name: ${{ env.VERSION }}
+          body: ${{ env.VERSION }}
+          files: ModernDiscord16.zip
+
+      - name: Clean up
+        run: rm ModernDiscord16.zip
