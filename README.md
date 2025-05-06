@@ -22,7 +22,7 @@ A Discord theme inspired by the iconic VGUI interface of the GoldSrc Engine (Cou
 
 ### Prerequisites
 A Discord client that supports custom themes  
-(e.g. [Vencord](https://vencord.dev/), [BetterDiscord](https://betterdiscord.app/))
+(e.g. [Vencord](https://vencord.dev/))
 
 ### Regular Download
 
