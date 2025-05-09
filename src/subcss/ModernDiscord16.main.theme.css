@@ -375,6 +375,13 @@ textarea,
   gap: 2px !important;
 }
 
+.vc-addon-card,
+.vc-settings-quickActions-pill {
+  background-color: var(--custom-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-button) !important;
+}
+
 /* files */
 .visual-refresh .file__0ccae,
 .upload_aa605f,
