@@ -157,6 +157,12 @@ textarea,
 }
 
 /* settings */
+.sidebarRegion__23e6b {
+  background-color: var(--custom-secondary-bg) !important;
+  border: 1px solid !important;
+  border-color: var(--border-input) !important;
+}
+
 :where([role="tab"]).item_b3f026 {
   margin-top: 2px !important;
 }
