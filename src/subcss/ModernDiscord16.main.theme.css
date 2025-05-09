@@ -13,8 +13,8 @@
   --border-light: #8c9284;
   --border-dark: #292c21;
   /* font */
-  --font-primary: "Adwaita" !important;
-  
+  --font-primary: "Arial" !important;
+
   /* primary backgrounds */
   --background-primary: var(--custom-bg) !important;
   --background-tertiary: var(--custom-bg) !important;
@@ -246,7 +246,7 @@ textarea,
   border-color: var(--border-button) !important;
   width: 5px !important;
   margin-left: -3px !important;
-  transition:none !important;
+  transition: none !important;
 }
 
 .videoButton_cf09d8,
@@ -257,10 +257,11 @@ textarea,
   border-color: var(--border-button) !important;
 }
 
-/* server list */
+/* server list 
 :where([aria-label="Servers sidebar"]) {
   margin-top: 50px !important;
 }
+*/
 
 /* activity */
 .container__0f2e8 {
@@ -282,10 +283,6 @@ textarea,
   margin-right: 3px !important;
 }
 
-.header_f37cb1 {
-  background-color: var(--custom-bg) !important;
-}
-
 /* dividers */
 :where(.visual-refresh) .separator_c1e9c4,
 .sectionDivider__35e86,
@@ -304,6 +301,47 @@ textarea,
   background-color: var(--custom-bg) !important;
 }
 
+/* status "balls" yoinked from domi */
+[class^='mask_'] rect,
+[class^='mask_'] circle,
+[class^='mask_'] svg {
+  display: none;
+}
+
+.wrapper__44b0c:has(rect)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper__44b0c:has(rect[mask='url(#svg-mask-status-online)'])::after,
+.wrapper__44b0c:has(rect[mask='url(#svg-mask-status-online-mobile)'])::after {
+  background: transparent !important;
+  outline: 2px solid #57CBDE;
+}
+
+.wrapper__44b0c:has(rect[mask='url(#svg-mask-status-dnd)'])::after {
+  background: transparent !important;
+  outline: 2px solid #ff4133;
+}
+
+.wrapper__44b0c:has(rect[mask='url(#svg-mask-status-idle)'])::after {
+  background: transparent !important;
+  outline: 2px solid #579FBE;
+}
+
+.wrapper__44b0c:has(rect[mask='url(#svg-mask-status-offline)'])::after {
+  background: transparent !important;
+  outline: 2px solid #898989;
+}
+
+.wrapper__44b0c:has(rect[mask='url(#svg-mask-status-streaming)'])::after {
+  background: transparent !important;
+  outline: 2px solid #9147ff;
+}
+
 /* buttons */
 .button__201d5:not(.attachButton__0923f):not([aria-label="User Settings"]):not([aria-label="Deafen"]):not([aria-label="Mute"]):not([aria-label="Enable Game Activity"]),
 :where(.iconWrapper__9293f)[role="button"] :not([aria-label="Help"]) :not([aria-label="Inbox"]) :not([aria-label="User Settings"]) :not([aria-label="Deafen"]) :not([aria-label="Mute"]) :not([aria-label="Enable Game Activity"]),
@@ -311,7 +349,7 @@ textarea,
   background-color: var(--custom-bg) !important;
 }
 
-.button__201d5:not(.attachButton__0923f):not(.detailsTextButton__0be77),
+.button__201d5:not(.attachButton__0923f):not(.detailsTextButton__0be77):not(.labelWrapper__06d62 .button__201d5),
 :where(.iconWrapper__9293f)[role="button"]:not([aria-label="Help"]):not([aria-label="Inbox"]),
 :where([role="tab"]),
 .reactionBtn__23977,
@@ -324,7 +362,8 @@ textarea,
   border-color: var(--border-button) !important;
 }
 
-.channel__972a0:focus-within .closeButton__972a0, .channel__972a0:hover .closeButton__972a0 {
+.channel__972a0:focus-within .closeButton__972a0,
+.channel__972a0:hover .closeButton__972a0 {
   border: 1px solid !important;
   border-color: var(--border-button) !important;
   width: 8px !important;
@@ -353,7 +392,25 @@ textarea,
 }
 
 /* channels */
-:where([id="channels"]),
+.header_f37cb1 {
+  background-color: var(--custom-secondary-bg) !important;
+}
+
+.headerEllipseBackdrop_f37cb1,
+.headerEllipseForeground_f37cb1,
+.headerGlass_f37cb1 {
+  opacity: 0 !important;
+}
+
+:where(.visual-refresh) .bannerVisible_f37cb1 .headerContent_f37cb1 {
+  filter: none !important;
+}
+
+.animatedContainer_f37cb1 {
+  box-shadow: none !important;
+}
+
+.visual-refresh .container__2637a,
 .privateChannels__35e86 {
   border: 1px solid !important;
   border-color: var(--border-input) !important;
@@ -367,10 +424,21 @@ textarea,
   margin-bottom: 55px !important;
 }
 
+:where(.visual-refresh) .spine__5b40b,
+:where(.visual-refresh) .spineBorder__5b40b {
+  width: 2px !important;
+  height: 60% !important;
+  padding-bottom: 10px !important;
+}
+
 /* user area */
 [aria-label="User area"].panels_c48ade {
   border: 1px solid !important;
   border-color: var(--border-button) !important;
+}
+
+.container_e131a9 {
+  border: 0px !important;
 }
 
 /* chat */
@@ -447,8 +515,7 @@ textarea,
   border-radius: 0px 0px 0px !important;
 }
 
-/* disable for now until i get to status indicators */
-/* [class^='listItem_'] [class^='wrapper_']>[class^='svg_']>mask,
+[class^='listItem_'] [class^='wrapper_']>[class^='svg_']>mask,
 [class^='bannerSVGWrapper_']>mask>circle {
   display: none;
 }
@@ -456,7 +523,7 @@ textarea,
 [class^='mask_']>foreignObject,
 [class^='svg_']>foreignObject {
   mask-image: none;
-} */ 
+}
 
 @font-face {
   font-family: 'Adwaita';
