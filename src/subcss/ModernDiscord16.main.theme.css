@@ -343,33 +343,14 @@ textarea,
 }
 
 /* buttons */
-.button__201d5
-  :not(.attachButton__0923f)
-  :not([aria-label="User Settings"])
-  :not([aria-label="Deafen"])
-  :not([aria-label="Mute"])
-  :not([aria-label="Enable Game Activity"]),
-:where(.iconWrapper__9293f)[role="button"] 
-  :not([aria-label="Help"]) 
-  :not([aria-label="Inbox"]) 
-  :not([aria-label="User Settings"]) 
-  :not([aria-label="Deafen"]) 
-  :not([aria-label="Mute"]) 
-  :not([aria-label="Enable Game Activity"]),
-:where([role="tab"]) :not([aria-label="User Settings"]) 
-  :not([aria-label="Deafen"]) 
-  :not([aria-label="Mute"]) 
-  :not([aria-label="Enable Game Activity"]) {
+.button__201d5:not(.attachButton__0923f):not([aria-label="User Settings"]):not([aria-label="Deafen"]):not([aria-label="Mute"]):not([aria-label="Enable Game Activity"]),
+:where(.iconWrapper__9293f)[role="button"] :not([aria-label="Help"]) :not([aria-label="Inbox"]) :not([aria-label="User Settings"]) :not([aria-label="Deafen"]) :not([aria-label="Mute"]) :not([aria-label="Enable Game Activity"]),
+:where([role="tab"]) :not([aria-label="User Settings"]) :not([aria-label="Deafen"]) :not([aria-label="Mute"]) :not([aria-label="Enable Game Activity"]) {
   background-color: var(--custom-bg) !important;
 }
 
-.button__201d5
-  :not(.attachButton__0923f)
-  :not(.detailsTextButton__0be77)
-  :not(.labelWrapper__06d62 .button__201d5),
-:where(.iconWrapper__9293f)[role="button"]
-  :not([aria-label="Help"])
-  :not([aria-label="Inbox"]),
+.button__201d5:not(.attachButton__0923f):not(.detailsTextButton__0be77):not(.labelWrapper__06d62 .button__201d5),
+:where(.iconWrapper__9293f)[role="button"]:not([aria-label="Help"]):not([aria-label="Inbox"]),
 :where([role="tab"]),
 .reactionBtn__23977,
 .reaction__23977,
@@ -381,7 +362,8 @@ textarea,
   border-color: var(--border-button) !important;
 }
 
-button.button__201d5.lookBlank__201d5.colorBrand__201d5.sizeMedium__201d5.grow__201d5 {
+button.button__201d5.lookBlank__201d5.colorBrand__201d5.sizeMedium__201d5.grow__201d5,
+button.button__201d5.lookLink__201d5.lowSaturationUnderline__41f68.colorLink__201d5.sizeMin__201d5.grow__201d5 {
   border: none !important;
 }
 
